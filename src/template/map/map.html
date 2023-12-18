@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="map.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>Lingkar Hijau</title>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <section class="main-map">
+        <div class="container__map">
+          <h2>Membagi Kebahagian dengan Menanam Pohon</h2>
+          <p>
+            Lingkar Hijau Membagi Kebahagian Untuk Semua, Memberikan Informasi
+            Pohonmu Untuk Indonesia
+          <p>
+          <div class="wrapper">
+            <div id="map" class="map" style="width: 900px; height: 420px"></div>
+            <script>
+              const map = L.map('map').setView([-2.2331, 117.2841], 4.5);
+    
+              const tiles = L.tileLayer(
+                'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                  maxZoom: 19,
+                  attribution:
+                    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                }
+              ).addTo(map);
+              const customIcon = L.icon({
+                iconUrl: '../../public/icons/free_icon_6.svg',
+                iconSize: [50, 45],
+              });
+    
+              const marker_1 = L.marker([-7.628, 108.845], {
+                title: 'Pohon Pinus',
+                icon: customIcon,
+              })
+                .bindPopup(
+                  '<b>Pohon Pinus H <br> <br> </b><b>Habitat :</b> Tropis <br> <b> Lokasi : </b> Pantai Ayah, Cilacap, Jawa Tengah '
+                )
+                .addTo(map)
+                .openPopup();
+    
+              const marker_2 = L.marker([-8.4136, 116.4822], {
+                title: 'Pohon Mahoni',
+                icon: customIcon,
+              })
+                .bindPopup(
+                  '<b>Pohon Mahoni <br> <br> </b> <b>Habitat :</b> Sub Tropis <br> <b> Lokasi : </b> Hutan Gunung Rinjani,Lombok Timur, West Nusa Tenggara, Indonesia '
+                )
+                .addTo(map)
+                .openPopup();
+    
+              const marker_3 = L.marker([0.49006, 101.45247], {
+                title: 'Pohon Jambu',
+                icon: customIcon,
+              })
+                .bindPopup(
+                  '<b>Pohon Jambu <br> <br> </b> <b>Habitat :</b> Tropis <br> <b> Lokasi : </b> Hutan di Kelurahan Tengkerang Tengah, Kampar Regency, Riau'
+                )
+                .addTo(map)
+                .openPopup();
+    
+              const marker_4 = L.marker([-0.8669, 116.9776], {
+                title: 'Pohon Mangga',
+                icon: customIcon,
+              })
+                .bindPopup(
+                  '<b>Pohon Mangga <br><br> </b> <b>Habitat :</b> Tropis <br> <b> Lokasi : </b> Taman Hutan Raya Bukit Soeharto, Kutai Kartanegara, Kalimantan Timur '
+                )
+                .addTo(map)
+                .openPopup();
+              function onMapClick(e) {
+                Popup.setLatLng(e.latlng)
+                  .setContent(`You clicked the map at ${e.latlng.toString()}`)
+                  .openOn(map);
+              }
+    
+              map.on('click', onMapClick);
+            </script>
+          </div>
+          <div class="content__map">
+            <button class="button__map">
+              <a href="#progres_pohon">
+                Ikuti Proses Kita
+              </a>
+            </button>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

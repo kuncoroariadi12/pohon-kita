@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="dicoding:email" content="kuncoroariadi@gmail.com">
+    <link rel="stylesheet" href="support.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="icon" href="../../public/heros/pohon-kita-logo.png">
+    <title>Pohon Kita</title>
+    <script src="https://use.fontawesome.com/b070c8f1df.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <header>
+      <!-- Desktop Navbar -->
+    <nav class="navbar">
+      <a class="nav-logo" href="#">Pohon Kita</a>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="../home-user/home-user.html">Home</a></li>
+        <li class="nav-item"><a href="../information/index.html">Information</a></li>
+        <li class="nav-item"><a href="../location/index.html">Location</a></li>
+        <li class="nav-item"><a href="#/">Support</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <nav class="mobile-menu">
+      <div class="icon-menu" id="icon-mobile">
+        <button aria-label="button menu dropdown on mobile device" type="button">
+          <span class="fa fa-bars fa-lg"></span>
+        </button>
+      </div>
+      <div class="mobile-logo" aria-label="mobile-logo">Pohon Kita</div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <nav id="drawer" class="nav-mobile">
+      <ul class="nav-mob-list">
+        <li class="nav-item"><a href="../home-user/home-user.html">Home</a></li>
+        <li class="nav-item"><a href="../information/index.html">Information</a></li>
+        <li class="nav-item"><a href="../location/index.html">Location</a></li>
+        <li class="nav-item"><a href="#/">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    
+    <div class="container-support">
+      <div class="support-title" style="width: 90%; margin: 0 auto">
+        <h1 style="text-align: center; font-size: 25px; margin-bottom: 25px">Kirim Informasi Anda Agar Dapat Terhubung dengan Kami!</h1>
+      </div>
+
+      <main>
+      <div class="container-form">
+        <form action="/support" method="post" class="form-support">
+          <div class="form-data-diri">
+            <input type="text" placeholder="Nama Anda" required name="nama" />
+            <input type="text" placeholder="E-Mail" required name="email" />
+            <input type="text" placeholder="No. Handphone" required name="nomorHp" />
+          </div>
+          <textarea placeholder="Pesan Anda" class="form-pesan" required name="pesan"></textarea>
+          <input type="submit" value="Kirim" class="submit-form" />
+        </form>
+      </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+      <!-- Footer Description and Profile -->
+      <div class="footer-main">
+        <div class="footer-title">
+          <a href="#/">Pohon Kita</a>
+          <h4>Website Penanaman Pohon</h4>
+          <p>Final Project Evaluasi Akhir Semester Mata Kuliah Manajemen Proyek B081 - Prodi Informatika UPN "Veteran" Jawa Timur</p>
+        </div>
+        <div class="footer-profile">
+          <h3>Tentang Kami</h3>
+          <div class="footer-profile-card">
+            <div class="footer-profile-member">
+              <img src="../../public/images/kuncoro.png" alt="Member One">
+              <p>Kuncoro Ariadi</p>
+            </div>
+            <div class="footer-profile-member">
+              <img src="../../public/images/devina.png" alt="Member Two">
+              <p>Devina Margarita</p>
+            </div>
+            <div class="footer-profile-member">
+              <img src="../../public/images/profile-three.png" alt="Member Three">
+              <p>Nabila Sya'bani</p>
+            </div>
+            <div class="footer-profile-member">
+              <img src="../../public/images/firdausa.png" alt="Member Four">
+              <p>Firdausa Yasmin</p>
+            </div>
+            <div class="footer-profile-member">
+              <img src="../../public/images/reyfaldi.png" alt="Member Four">
+              <p>Reyfaldi Maulana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="footer-copyright">
+        <p>Pohon Kita © 2023 - made with love</p>
+      </div>
+    </footer>
+    <script src="support-user.js"></script>
+  </body>
+</html>
